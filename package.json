@@ -1,0 +1,16 @@
+{
+  "name": "web-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn run parcel src/index.html --open"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.1.1",
+    "parcel": "^2.1.1"
+  },
+  "dependencies": {
+    "destyle.css": "^3.0.2"
+  }
+}
