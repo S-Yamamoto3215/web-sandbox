@@ -15,19 +15,29 @@ main {
 }
 
 .title {
+  font-size: 20px;
+  text-align: center;
 }
 
 .form-area {
+  margin-top: 15px;
 }
 
 .form-group {
+  color: #333;
+  margin-top: 30px;
 }
 
 .form-label {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .form-input {
-
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .form-btn {
