@@ -57,10 +57,27 @@ const checkEmail = (targetElement: HTMLInputElement) => {
   return result
 }
 
+const checkPasswordsMatch = (passwordElement: HTMLInputElement, password2Element: HTMLInputElement) => {
+  const result = {
+    isValidation: true,
+    errorMessage: ""
+  }
+
+  const passwordValue = passwordElement.value
+  const password2Value = password2Element.value
+  const isMatch = passwordValue === password2Value
+
+  if (!isMatch) {
+    result.isValidation = false;
+    result.errorMessage = !password2Value ? "Password2 is required" : "Email is not valid"
+  }
+
+  return result
+}
+
 // form submit
 form.addEventListener('submit', event => {
   event.preventDefault();
 
   const { inputName, inputEmail, inputPassword, inputPassword2 } = checkRequired();
-  // checkPasswordsMatch()
 })
