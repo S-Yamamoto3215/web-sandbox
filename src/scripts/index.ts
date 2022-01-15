@@ -40,11 +40,27 @@ const checkLength = (targetElement: HTMLInputElement) => {
   return result
 }
 
+const checkEmail = (targetElement: HTMLInputElement) => {
+  const result = {
+    isValidation: true,
+    errorMessage: ""
+  }
+
+  let emailReg = new RegExp('^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$');
+  const value = targetElement.value;
+
+  if (!emailReg.test(value)) {
+    result.isValidation = false;
+    result.errorMessage = "Email is not valid";
+  }
+
+  return result
+}
+
 // form submit
 form.addEventListener('submit', event => {
   event.preventDefault();
 
   const { inputName, inputEmail, inputPassword, inputPassword2 } = checkRequired();
-  // checkEmail()
   // checkPasswordsMatch()
 })
