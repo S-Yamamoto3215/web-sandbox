@@ -66,8 +66,28 @@ export const checkPasswordsMatch = (passwordElement: HTMLInputElement, password2
 
   if (!isMatch) {
     result.isValidation = false;
-    result.errorMessage = !password2Value ? "Password2 is required" : "Email is not valid"
+    result.errorMessage = !password2Value ? "Password2 is required" : "Passwords do not match"
   }
 
   return result
+}
+
+export const switchingView = (result: {isValidation: boolean, errorMessage: string}, inputElement: HTMLInputElement) => {
+  const { isValidation, errorMessage} = result;
+  if (isValidation) {
+    inputElement.classList.add('form-input-success');
+    inputElement.classList.remove('form-input-error');
+    if (inputElement.nextElementSibling) {
+      inputElement.nextElementSibling.remove();
+    }
+  } else {
+    inputElement.classList.add('form-input-error')
+    inputElement.classList.remove('form-input-success')
+    const error_message_element = document.createElement('p');
+    if (!inputElement.nextElementSibling) {
+      error_message_element.textContent = errorMessage;
+      error_message_element.classList.add("error-message")
+      inputElement.after(error_message_element);
+    }
+  }
 }

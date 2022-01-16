@@ -51,6 +51,12 @@ main {
   border: 1px solid $color-error;
 }
 
+.error-message {
+  color: $color-error;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
 .form-btn {
   color: #fff;
   font-size: 0.95rem;

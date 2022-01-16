@@ -1,4 +1,10 @@
-import { checkRequired, checkLength, checkEmail, checkPasswordsMatch } from "./functions";
+import {
+  checkRequired,
+  checkLength,
+  checkEmail,
+  checkPasswordsMatch,
+  switchingView
+} from "./functions";
 
 // get form Element
 const form = document.getElementById('form');
@@ -14,15 +20,3 @@ form.addEventListener('submit', event => {
   switchingView(checkLength(inputPassword), inputPassword);
   switchingView(checkPasswordsMatch(inputPassword, inputPassword2), inputPassword2);
 })
-
-
-const switchingView = (result: {isValidation: boolean, errorMessage: string}, inputElement: HTMLInputElement) => {
-  const { isValidation, errorMessage} = result;
-  if (isValidation) {
-    inputElement.classList.add('form-input-success')
-    inputElement.classList.remove('form-input-error')
-  } else {
-    inputElement.classList.add('form-input-error')
-    inputElement.classList.remove('form-input-success')
-  }
-}
