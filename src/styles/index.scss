@@ -1,5 +1,8 @@
 @import "./destyle.min.scss";
 
+$color-success: #34d399;
+$color-error: #f87171;
+
 main {
   height: 100vh;
   display: flex;
@@ -38,6 +41,14 @@ main {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.form-input-success {
+  border: 1px solid $color-success;
+}
+
+.form-input-error {
+  border: 1px solid $color-error;
 }
 
 .form-btn {
