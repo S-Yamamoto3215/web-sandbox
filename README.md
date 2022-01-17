@@ -1,12 +1,16 @@
-# web-sandbox
+# Movie Seat Booking
 
-HTML、SCSS、TypeScript構成によるSandboxです。  
+チケットを購入するために選択する映画の選択肢と座席を劇場に表示する
 
-`yarn dev`でparcelが起動し、`http://localhost:1234`にindex.htmlが展開されます。  
-index.htmlで読み込まれているSCSSやTypeScriptもコンパイルされた状態で読み込まれます。
+## 見本
 
-## これまでに作成したもの
+[https://vanillawebprojects.com/projects/movie-seat-booking/](https://vanillawebprojects.com/projects/movie-seat-booking/)
 
-| No. | title | Branche |
-| :-- | :-- | :-- |
-| 01 | Form Validation | [01_form-validation](https://github.com/S-Yamamoto3215/web-sandbox/tree/01_form-validation) |
+## 仕様
+
+- 映画セレクト、スクリーン、シート、レジェンド、シート情報などのUI表示
+- ユーザーは映画/価格を選択できる
+- 座席の選択・解除が可能
+- 満席の場合は選択できない
+- 座席数、価格は更新される
+- 座席、映画、価格をローカルストレージに保存、更新時にUIへ入力される。
