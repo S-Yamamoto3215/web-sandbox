@@ -1,1 +1,109 @@
 @import "./destyle.min.scss";
+
+// Variables
+$white: #ffffff;
+$black: #000000;
+$primary: #70EAF6;
+$secondary: #6e6e79;
+$base-color: #242333;
+$sub-base-color: #201F2E;
+
+* {
+  color: $white;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $base-color;
+}
+
+.pick-area {
+  margin-bottom: 30px;
+}
+
+.pick-selects {
+  color: $black;
+  background: $white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.seat-list-area {
+  width: 300px;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: $sub-base-color;
+}
+
+.seat-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.seat-list-item {
+  display: flex;
+}
+
+.seat-list-text {
+  color: $secondary;
+  margin-left: 5px;
+}
+
+.screen-area {
+  margin-bottom: 25px;
+}
+
+.screen {
+  width: 200px;
+  height: 80px;
+  background-color: $white;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgb(255 255 255 / 70%);
+}
+
+.seat {
+  width: 15px;
+  height: 15px;
+  background-color: $secondary;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.selected {
+  background-color: $primary;
+}
+
+.occupied {
+  background-color: $white;
+}
+
+.seat-area {
+  margin-bottom: 50px;
+}
+
+.seat-row {
+  display: flex;
+  margin-bottom: 5px;
+
+  .seat {
+    cursor: pointer;
+    margin-right: 5px;
+
+    &:nth-of-type(2), &:nth-of-type(6) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+}
+
+.selected-seat-count, .total-price {
+  color: $primary;
+}

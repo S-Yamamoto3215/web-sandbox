@@ -13,7 +13,7 @@
   <main class="content-area">
     <div class="pick-area">
       <label for="moves" class="pick-label">Pick a movie:</label>
-      <select name="moves" id="moves">
+      <select name="moves" id="moves" class="pick-selects">
         <option value="10">Avengers: Endgame ($10)</option>
         <option value="12">Joker ($12)</option>
         <option value="8">Toy Story 4 ($8)</option>
@@ -24,15 +24,15 @@
       <ul class="seat-list">
         <li class="seat-list-item">
           <div class="seat"></div>
-          <p>N/A</p>
+          <p class="seat-list-text">N/A</p>
         </li>
-        <li class="typeSeat-list-item">
+        <li class="seat-list-item">
           <div class="seat selected"></div>
-          <p>Selected</p>
+          <p class="seat-list-text">Selected</p>
         </li>
-        <li class="typeSeat-list-item">
+        <li class="seat-list-item">
           <div class="seat occupied"></div>
-          <p>Occupied</p>
+          <p class="seat-list-text">Occupied</p>
         </li>
       </ul>
     </div>
@@ -54,11 +54,21 @@
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="seat-row">
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
       </div>
       <div class="seat-row">
         <div class="seat"></div>
@@ -74,18 +84,8 @@
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="seat-row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
@@ -95,9 +95,9 @@
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
         <div class="seat"></div>
       </div>
       </div>
