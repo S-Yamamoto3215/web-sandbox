@@ -4,7 +4,7 @@ const seats = document.getElementById('seats').getElementsByClassName('seat')
 const seatClickHandler = (seat: Element) => {
   seat.classList.toggle("selected");
   const { selectedSeatCount, movePrice } = getCurrentData();
-  console.log(selectedSeatCount, movePrice)
+  UpdateTextContent(selectedSeatCount, movePrice);
 }
 
 for (let i = 0; i < seats.length; i++) {
@@ -20,7 +20,7 @@ const moves = document.getElementById('moves');
 
 const moveSelectHandler = () => {
   const { selectedSeatCount, movePrice } = getCurrentData();
-  console.log(selectedSeatCount, movePrice)
+  UpdateTextContent(selectedSeatCount, movePrice);
 }
 
 moves.addEventListener('change', () => moveSelectHandler())
@@ -35,3 +35,10 @@ const getCurrentData = () => {
 
   return { selectedSeatCount: selectedSeatCount, movePrice: movePrice }
 }
+
+// Update textContent
+const UpdateTextContent = (seatCount: number, price: number) => {
+  const totalPrice = price * seatCount;
+  document.getElementById("selected-seat-count").textContent = String(seatCount);
+  document.getElementById("total-price").textContent = String(totalPrice);
+};
