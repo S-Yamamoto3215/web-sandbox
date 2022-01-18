@@ -16,7 +16,7 @@ for (let i = 0; i < seats.length; i++) {
 }
 
 // Pick Event
-const moves = document.getElementById('moves');
+const moves = <HTMLInputElement>document.getElementById('moves');
 
 const moveSelectHandler = () => {
   const { selectedSeatCount, movePrice } = getCurrentData();
@@ -42,3 +42,13 @@ const UpdateTextContent = (seatCount: number, price: number) => {
   document.getElementById("selected-seat-count").textContent = String(seatCount);
   document.getElementById("total-price").textContent = String(totalPrice);
 };
+
+// init function
+const initFunction = () => {
+  const seatCount = document.getElementById('seats').getElementsByClassName('seat selected').length;
+  const moveElement = <HTMLInputElement>document.getElementById('moves');
+  const movePrice = Number(moveElement.value);
+  UpdateTextContent(seatCount, movePrice);
+}
+
+initFunction()
