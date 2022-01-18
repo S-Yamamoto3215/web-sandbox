@@ -10,3 +10,4 @@ index.htmlで読み込まれているSCSSやTypeScriptもコンパイルされ�
 | No. | title | Branche |
 | :-- | :-- | :-- |
 | 01 | Form Validation | [01_form-validation](https://github.com/S-Yamamoto3215/web-sandbox/tree/01_form-validation) |
+| 02 | Movie Seat Booking | [02_movie-seat-booking](https://github.com/S-Yamamoto3215/web-sandbox/tree/02_movie-seat-booking) |
